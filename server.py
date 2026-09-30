@@ -11,9 +11,12 @@ import uuid
 from contextlib import asynccontextmanager, contextmanager
 from datetime import datetime
 
+from dotenv import load_dotenv
 import requests
 from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.responses import FileResponse
+
+load_dotenv()
 
 DB_PATH = os.getenv("HOME_MONITOR_DB", "home_monitor.db")
 IMAGES_DIR = os.getenv("HOME_MONITOR_IMAGES", "images")
