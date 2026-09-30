@@ -3,6 +3,9 @@ import time
 import random
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 IMAGES_DIR = "pi_images"
 
