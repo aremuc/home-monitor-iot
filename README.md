@@ -22,10 +22,10 @@ A small client (`pi.py`) simulates a Raspberry Pi camera by uploading random ima
 ```bash
 pip install -r requirements.txt
 
-# Imagga API credentials
-export IMAGGA_API_KEY=...
-export IMAGGA_API_SECRET=...
-# PowerShell: $env:IMAGGA_API_KEY="..."; $env:IMAGGA_API_SECRET="..."
+Copy `.env.example` to `.env` and add your Imagga credentials:
+
+IMAGGA_API_KEY=your_api_key_here
+IMAGGA_API_SECRET=your_api_secret_here
 
 uvicorn server:app --reload      # http://127.0.0.1:8000  (interactive docs at /docs)
 python pi.py                     # in a second terminal: uploads simulated camera images
